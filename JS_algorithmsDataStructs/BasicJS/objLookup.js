@@ -3,7 +3,7 @@ function phoneticLookup(val) {
     var result = "";
   
     // Only change code below this line
-  var val = {
+  var list = {
       "alpha": "Adams",
       "bravo": "Boston",
       "charlie": "Chicago",
@@ -11,7 +11,7 @@ function phoneticLookup(val) {
       "echo": "Easy",
       "foxtrot": "Frank"
     }
-  
+  result = list[val];
     // Only change code above this line
     return result;
   }
