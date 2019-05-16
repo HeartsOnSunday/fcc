@@ -12,6 +12,7 @@ function phoneticLookup(val) {
       "foxtrot": "Frank"
     }
   result = list[val];
+  console.log(result);
     // Only change code above this line
     return result;
   }
