@@ -29,20 +29,24 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
-console.log("Test");
-if (collectionCopy[id].album == prop){
+if (prop !== "tracks" && value){
 
   // console.log(`Album ID no. ${id} with ${prop}, and value ${value}`)
   // if(id.props == "tracks" && !value == ""){
-   console.log(id);
    console.log("Add to Record Collection");
+   collection[id].push(value);
 }
   else {
     console.log("go watch game of thrones");
   };
-
+  console.log(`Prop: ${prop}`);
+  console.log(`Value ${value}`);
+console.log(collection);
   return collection;
 };
 
 // Alter values below to test your code
 updateRecords(5439, "artist", "ABBA");
+//updateRecords(1245, "tracks", "");
+//updateRecords(1245, "tracks");
+updateRecords(2468, "tracks", "cinnamon girl");
