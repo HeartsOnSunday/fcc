@@ -34,19 +34,25 @@ if (prop !== "tracks" && value){
   // console.log(`Album ID no. ${id} with ${prop}, and value ${value}`)
   // if(id.props == "tracks" && !value == ""){
    console.log("Add to Record Collection");
-   collection[id].push(value);
+   collectionCopy[id][0] = { prop: value };
+   //collection[id].push(value);
+   console.log(collectionCopy[id][0]); // Derp
 }
   else {
     console.log("go watch game of thrones");
   };
   console.log(`Prop: ${prop}`);
   console.log(`Value ${value}`);
-console.log(collection);
+
   return collection;
 };
 
 // Alter values below to test your code
 updateRecords(5439, "artist", "ABBA");
-//updateRecords(1245, "tracks", "");
-//updateRecords(1245, "tracks");
+
 updateRecords(2468, "tracks", "cinnamon girl");
+
+/*
+copy of object ["name of new property"] = value of new property
+ADD NEW PROPERTY TO THHE OBJECT
+*/
