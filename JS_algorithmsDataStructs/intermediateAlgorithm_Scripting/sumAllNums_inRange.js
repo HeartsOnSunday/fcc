@@ -5,14 +5,19 @@ function sumAll(arr) {
   //console.log(`first ${num1}`);
   //console.log(`second ${num2}`);
   function sumRange(less, greater) {
-    console.log(`Add num1: ${num1} to numbers less than and including ${num2}`);
+    var sum = less;
+    counter = greater - less;
+    for (counter; counter > 0; counter--) {
+      console.log(`calculation`);
+    }
   }
   //sort numbers from the array
   if (num1 > num2) {
-    console.log(`num1: ${num1} is larger than ${num2}`);
-    sumRange(num1, num2);
+    //console.log(`num1: ${num1} is larger than ${num2}`);
+    sumRange(num2, num1);
   } else {
-    console.log(`num2: ${num2} is larger than ${num1}`);
+    //console.log(`num2: ${num2} is larger than ${num1}`);
+    sumRange(num1, num2);
   }
 
   return 1;
