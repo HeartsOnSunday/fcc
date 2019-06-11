@@ -1,15 +1,21 @@
 function sumAll(arr) {
   //Identify components
-  let num1 = arr[0];
-  let num2 = arr[1];
+  let num1 = Number(arr[0]);
+  let num2 = Number(arr[1]);
   //console.log(`first ${num1}`);
   //console.log(`second ${num2}`);
   function sumRange(less, greater) {
+    //console.log(typeof less);
     var sum = less;
     counter = greater - less;
     for (counter; counter > 0; counter--) {
-      console.log(`calculation`);
+      //console.log(`${counter}`);
+      let addition = less;
+      sum += Number(addition + counter);
+      //console.log(`Value is currently ${sum}`);
     }
+    console.log(sum);
+    return sum;
   }
   //sort numbers from the array
   if (num1 > num2) {
