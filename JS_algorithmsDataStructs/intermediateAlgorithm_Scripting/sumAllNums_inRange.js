@@ -1,54 +1,35 @@
 function sumAll(arr) {
   //Identify components
-  let num1 = Number(arr[0]);
-  let num2 = Number(arr[1]);
-  //console.log(`first ${num1}`);
-  //console.log(`second ${num2}`);
+  let newArr = arr.sort(function(a, b) {
+    return a - b;
+  });
+  var sum = 0;
+  //console.log(`Value Starts At ${newArr[0]}`);
+  for (var i = newArr[0]; i < newArr[1] + 1; i++) {
+    sum += Number(i);
+    // console.log(`The sum is now ${sum}`);
+  }
+  console.log(sum);
+  return sum;
+}
+/*
   function sumRange(less, greater) {
-    //console.log(typeof less);
     var sum = less;
     counter = greater - less;
     for (counter; counter > 0; counter--) {
-      //console.log(`${counter}`);
       let addition = less;
       sum += Number(addition + counter);
-      //console.log(`Value is currently ${sum}`);
     }
     console.log(sum);
     return sum;
   }
   //sort numbers from the array
   if (num1 > num2) {
-    //console.log(`num1: ${num1} is larger than ${num2}`);
     sumRange(num2, num1);
   } else {
-    //console.log(`num2: ${num2} is larger than ${num1}`);
     sumRange(num1, num2);
   }
-
-  return 1;
-}
-
-sumAll([1, 4]);
-sumAll([4, 1]);
-sumAll([5, 10]);
-sumAll([10, 5]);
-/*
-
-Receive numbers 
-numbers are in an array (1st, 2nd)
-return sum of all numbers from and inclding the 1st and 2nd numbers
-
-
-determine which is larger
-
-if(1st > 2nd)
-start at value of 2nd 
-Initiate a counter
-var sumz = 0;
-sumz += [2nd + i] counter!
-
-reverse logic
-
-if (2nd)
 */
+sumAll([1, 4]);
+sumAll([10, 4]);
+sumAll([5, 10]);
